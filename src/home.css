@@ -62,7 +62,7 @@ p, span, a {
 
 
 .header {
-    background-color: #1a4b84; /* Professional navy blue color */
+    background-color: #7bace4; /* Professional navy blue color */
     color: #ffffff;
     position: fixed;
     left: 0;
@@ -146,7 +146,7 @@ p, span, a {
     left: 0;
     width: 230px;
     padding: 15px 0;
-    background-color: #245d9f;
+    background-color: #7bace4;
     box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.5);
     z-index: 1;
     transform-origin: top;
