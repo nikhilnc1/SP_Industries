@@ -62,11 +62,15 @@ p, span, a {
 
 
 .header {
-    position: sticky;
+    background-color: #1a4b84; /* Professional navy blue color */
+    color: #ffffff;
+    position: fixed;
+    left: 0;
     top: 0;
     width: 100%;
-    z-index: 10;
-    /* background-color: #1a4b84; */
+    z-index: 999;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
     padding: 10px;
 }
 
@@ -109,7 +113,7 @@ p, span, a {
     text-decoration: none;
     text-transform: capitalize;
     font-size: 16px;
-    /* color: #F5EDED; */
+    color: #ffffff;
     line-height: 1.5;
     display: block;
 }
@@ -437,8 +441,6 @@ p, span, a {
     --timeline-line: #87CEEB;
     --timeline-dot: #00008B;
     --timeline-card: #FDFBF7;
-    --timeline-gradient: rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 50%,
-        rgba(255, 255, 255, 0) 100%;
 }
 
 *,
@@ -478,29 +480,14 @@ body {
     white-space: nowrap;
     max-width: 100%;
     padding: 0;
-    margin: 0;
+    margin: 80px 40px;
     display: block;
     background: var(--timeline-bg);
 }
 
 .timeline::before,
 .timeline::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 30px;
-    width: 100px;
-    z-index: 2;
-}
-
-.timeline::after {
-    right: 0;
-    background: linear-gradient(270deg, var(--timeline-gradient));
-}
-
-.timeline::before {
-    left: 0;
-    background: linear-gradient(90deg, var(--timeline-gradient));
+    display: none;
 }
 
 .timeline .info {
@@ -632,7 +619,7 @@ body {
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
 @media screen and (max-width: 800px) {
     .timeline {
-        padding: 0 5px;
+        margin: 60px 20px;
     }
     
     .timeline ol li {
@@ -666,6 +653,9 @@ body {
 }
 
 @media screen and (max-width: 500px) {
+    .timeline {
+        margin: 40px 15px;
+    }
     .timeline ol li {
         width: 80px;
     }
@@ -685,4 +675,42 @@ body {
     .timeline ol li:last-child {
         width: auto;
     }
+}
+
+.timeline ol li:first-child {
+    width: auto;
+    background: transparent;
+}
+
+.timeline ol li:first-child::after {
+    left: 0;
+}
+
+.timeline ol li:first-child div {
+    left: 7px;
+}
+
+@media screen and (max-width: 800px) {
+    .timeline ol li:first-child::after {
+        left: 0;
+    }
+    
+    .timeline ol li:first-child div {
+        left: 5px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .timeline ol li:first-child div {
+        left: 5px;
+    }
+}
+
+.header a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.header .menu>ul>li>a:hover {
+    color: #ff6b00; /* Orange hover effect to match SP Industries color */
 }
