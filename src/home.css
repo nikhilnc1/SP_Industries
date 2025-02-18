@@ -514,7 +514,7 @@ body {
   position: relative;
   white-space: nowrap;
   max-width: 100%;
-  padding: 0 40px;
+  padding: 0 10px;
   margin: 0;
   display: block;
 }
@@ -665,4 +665,10 @@ body {
   .timeline .info {
     display: none;
   }
+}
+
+/* Vision and mission */
+
+.component-heading{
+    color : #2980B9;
 }
