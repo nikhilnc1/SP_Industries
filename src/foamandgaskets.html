@@ -7,17 +7,49 @@
     <title>SP Industries</title>
     <!-- <link href="output.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/home.css">
+    <!-- <link rel="stylesheet" href="./css/home.css"> -->
     <!-- <link rel="stylesheet" href="./style.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
+<style>
+    .card-img-top {
+        height: 200px;
+        object-fit: contain;
+        padding: 15px;
+        background: #dae3ec;
+    }
+
+    .card {
+        transition: transform 0.2s;
+        border: none;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    a{
+       text-decoration: none;
+       color: black;
+    }
+    .btn-primary {
+        background-color: #1a4b84;
+        border: none;
+        padding: 8px 20px;
+    }
 
 
-<body class="font-mono">
+    .btn-primary:hover {
+        background-color: #123456;
+    }
+</style>
+<body>
     <div>
         <header class="header mb-5">
             <div class="container_1">
@@ -82,112 +114,46 @@
             </div>
         </header>
     </div>
+    <div style="margin-top: 50px;"></div>
 
-    <div class="about-section container mb-3" id="featured-3">
-        <div class="row row-cols-1 px-lg-5 row-cols-lg-3">
+    <div class="container mt-5 py-5">
+        <h2 class="text-primary text-center mb-5">Our Foam and Gaskets Collection</h2>
 
-            <div class="feature col-lg-6 col-md-12">
-                <h3 class="kanit-bold"><span class="kanit-bold text-warning">OUR </span>VISION</h3>
-                <p style="text-align: justify;">The vision of SP Industries is to Continue to explore and implement the
-                    latest technology
-                    throughout our facility, giving us and our customers a competitive advantage in our shared
-                    market space.
-                <p class="mt-3">
-                    Reinforce our sustainability efforts and continue to be an ambassador for a better
-                    environment.
-                </p>
-                </p>
-
+        <!-- Surface Protection Tape Products -->
+        <!-- <h3 class="text-warning mb-4">Surface Protection Tape Products</h3> -->
+        <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+            <div class="col" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                <div class="card h-100">
+                    <img src="./assets/products/EPDM_rubber_gaskets.png" class="card-img-top"
+                        alt="Surface Protection Tape">
+                    <div class="card-body">
+                        <h5 class="card-title">EPDM rubber gaskets</h5>
+                    </div>
+                </div>
             </div>
-
-            <div class="feature  col-lg-6 col-md-12">
-                <h3 class="kanit-bold"><span class="kanit-bold text-warning">OUR </span>MISSION</h3>
-                <p style="text-align: justify;">The mission of SP Industries is to exceed customers expectations by
-                    providing outstanding
-                    customer care through innovations created by talented, satisfied employees, while positively
-                    contributing to Indian society. We believe that our customers' satisfaction and thus their
-                    loyalty are our success.</p>
+            <div class="col" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <div class="card h-100">
+                    <img src="./assets/products/foam_die_cuts_and_gaskets.png" class="card-img-top"
+                        alt="Low Track Tape">
+                    <div class="card-body">
+                        <h5 class="card-title">Foam die cuts and gaskets</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                <div class="card h-100">
+                    <img src="./assets/products/antistatic_conductive_foam.png" class="card-img-top"
+                        alt="Metal Protection Film">
+                    <div class="card-body">
+                        <h5 class="card-title">Antistatic condutive foam</h5>
+                    </div>
+                </div>
             </div>
         </div>
+
+
+
     </div>
-
-    <div class="logos">
-        <div class="text-center">
-            <h2 class="kanit-bold pb-5"><span class="kanit-bold text-warning">OUR </span>VALUED CUSTOMERS</h2>
-        </div>
-        <div class="logos-slide py-3">
-            <img src="./assets/logos/bajaj-logo.png" />
-            <img src="./assets/logos/belris-logo.png" />
-            <img src="./assets/logos/carrierMidea-logo.png" />
-            <img src="./assets/logos/dexgreen-logo.png" />
-            <img src="./assets/logos/durashox-logo.png" />
-            <img src="./assets/logos/elringklinger-logo.png" />
-            <img src="./assets/logos/freseniuskabi-logo.png" />
-            <img src="./assets/logos/freudenberg-logo.png" />
-            <img src="./assets/logos/haier-logo.png" />
-            <img src="./assets/logos/kknag-logo.png" />
-            <img src="./assets/logos/pg-electropast-logo.png" />
-            <img src="./assets/logos/puratos-logo.png" />
-            <img src="./assets/logos/sanjay-techno-logo.png" />
-            <img src="./assets/logos/skh-logo.png" />
-            <img src="./assets/logos/southco-logo.png" />
-            <img src="./assets/logos/starion-logo.png" />
-            <img src="./assets/logos/supreme-logo.png" />
-            <img src="./assets/logos/tatasteel-logo.png" />
-            <img src="./assets/logos/tatasteeldownstreem-logo.png" />
-            <img src="./assets/logos/varroc-logo.png" />
-            <img src="./assets/logos/vasaya-logo.png" />
-            <img src="./assets/logos/whirlpool-logo.png" />
-        </div>
-    </div>
-    <!-- Timeline Section -->
-
-    <section class="timeline py-4">
-        <div class="text-center">
-            <h2 class="kanit-bold"><span class="kanit-bold text-warning">MILE</span>STONE</h2>
-        </div>
-        <ol>
-            <li>
-                <div>
-                    <time>2017</time>
-                    Start-up with manufacturing of bubble & foam bags.
-                </div>
-            </li>
-            <li>
-                <div>
-                    <time>2020</time>
-                    Now we are manufacturing & supply all types packaging material.
-                </div>
-            </li>
-            <li>
-                <div>
-                    <time>2021</time>
-                    Now we moved to our own purchased manufacturing facility expansion.
-                </div>
-            </li>
-            <li>
-                <div>
-                    <time>2022</time>
-                    We are now a proud Supplier of various MNC & Well-known Customers.
-                </div>
-            </li>
-            <li>
-                <div>
-                    <time>2023</time>
-                    We Achieved a Historic Growth in our Sales & Product Development.
-                </div>
-            </li>
-            <li>
-                <div>
-                    <time>2024</time>
-                    Looking forward to create a History with our Proud Customers & Our Manufacturing Team.
-
-                </div>
-            </li>
-            <li></li>
-        </ol>
-    </section>
-
     <footer class="py-4 mt-4" style="background-color: #e8f4f8;">
         <div class="container">
             <div class="row g-4 align-items-center">
@@ -268,50 +234,12 @@
             </div>
         </div>
     </footer>
-
-    <style>
-        .form-control {
-            background-color: #f8f9fa;
-            border: 1px solid #dee2e6;
-        }
-
-        .form-control:focus {
-            background-color: #ffffff;
-            border-color: #1a4b84;
-            box-shadow: 0 0 0 0.2rem rgba(26, 75, 132, 0.25);
-        }
-
-        .btn-primary {
-            background-color: #1a4b84;
-            border: none;
-        }
-
-        .btn-primary:hover {
-            background-color: #123456;
-            transform: translateY(-2px);
-            transition: all 0.3s ease;
-        }
-    </style>
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        // Wait for the DOM to load
-        document.addEventListener("DOMContentLoaded", function () {
-            const logosSlide = document.querySelector(".logos-slide");
-            const logosContainer = document.querySelector(".logos");
-    
-            // Clone the logos-slide content and append it to create a seamless loop
-            const clone = logosSlide.cloneNode(true);
-            logosContainer.appendChild(clone);
-    
-            // Ensure the cloned content follows immediately after the original
-            logosSlide.style.display = "inline-block";
-            clone.style.display = "inline-block";
+        AOS.init({
+            once: true // This will make animations occur only once
         });
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <script src="./js/index.js"></script>
 </body>
 
 </html>
