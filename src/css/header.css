@@ -1,4 +1,51 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body, h1, h2, h3, h4, h5, h6, p, a, button, input, select, textarea {
+  font-family: 'Oswald', sans-serif !important;
+}
+
+.kanit-bold, .kanit-regular {
+  font-family: 'Oswald', sans-serif !important;
+}
+
+.form-control {
+  font-family: 'Oswald', sans-serif;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+}
+
+.logo-text h4, .logo-text p {
+  font-family: 'Oswald', sans-serif !important;
+}
+
+.menu ul li a {
+  font-family: 'Oswald', sans-serif !important;
+}
+
+.industry-card h5, .industry-card p {
+  font-family: 'Oswald', sans-serif !important;
+}
+
+.timeline ol li div {
+  font-family: 'Oswald', sans-serif !important;
+}
+
+.contact-details, .thank-you-section {
+  font-family: 'Oswald', sans-serif !important;
+}
+
+
 /* Header Styles */
+
 .container_1 {
     max-width: 100%;
     margin: auto;
@@ -282,4 +329,30 @@
         display: flex;
     }
   }
+
+
+
+  /* footer */
+
+  .form-control {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+}
+
+.form-control:focus {
+    background-color: #ffffff;
+    border-color: #1a4b84;
+    box-shadow: 0 0 0 0.2rem rgba(26, 75, 132, 0.25);
+}
+
+.btn-primary {
+    background-color: #1a4b84;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #123456;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
   

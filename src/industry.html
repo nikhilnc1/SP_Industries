@@ -1,153 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SP Industries</title>
-    <!-- <link href="output.css" rel="stylesheet"> -->
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/home.css">
-    <!-- <link rel="stylesheet" href="./style.css"> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700;800&display=swap" rel="stylesheet"> -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>SP Industry - Industries We Serve & Footer</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            line-height: 1.6;
+        }
+
+        /* Industries Section */
+        .industries-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #0d6efd, #e3f2fd);
+            border-bottom: 3px solid #0d6efd;
+        }
+        .industry-card {
+            background-color: #ffffff;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            height: 100%;
+            padding: 20px;
+            text-align: center;
+            overflow: hidden;
+        }
+        .industry-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+        .industry-card h5 {
+            color: #0d6efd;
+            font-weight: 700;
+            margin-top: 15px;
+            font-size: 1.2rem;
+        }
+        .industry-card p {
+            color: #333;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        .industry-img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .industry-card:hover .industry-img {
+            transform: scale(1.05);
+        }
+        .section-title {
+            color: #ffffff;
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+        }
+        .section-subtitle {
+            color: #ffffff;
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 50px;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #f0f8ff;
+            padding: 60px 0;
+            border-top: 3px solid #0d6efd;
+            margin-top: 20px;
+        }
+        .thank-you-section h3, .contact-info h4 {
+            color: #0d6efd;
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        .contact-info h5 {
+            color: #ffca2c;
+            font-weight: 800;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+        }
+        .contact-details i {
+            color: #0d6efd;
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+        .contact-details p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #333;
+        }
+        .card {
+            border-radius: 15px;
+            background-color: #ffffff;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+        .form-control {
+            background-color: #f8f9fa;
+            border: 2px solid #dee2e6;
+            border-radius: 10px;
+            padding: 14px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+        .form-control:focus {
+            background-color: #ffffff;
+            /* border-color: #0d6efd; */
+            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+            outline: none;
+        }
+        .btn-primary {
+            background-color: #0d6efd;
+            border: none;
+            border-radius: 10px;
+            padding: 14px 20px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #0a58ca;
+            transform: translateY(-4px);
+            box-shadow: 0 6px 15px rgba(13, 110, 253, 0.4);
+        }
+        .btn-primary i {
+            font-size: 1.1rem;
+            margin-right: 8px;
+        }
+        select.form-control {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="gray" class="bi bi-caret-down-fill" viewBox="0 0 16 16"><path d="M7.247 11.14 2.451 5.658C2.171 5.273 2.607 4.8 3.082 4.8h9.836c.475 0 .911.473.631.858l-4.796 5.481a1 1 0 0 1-1.506 0z"/></svg>') no-repeat right 15px center;
+            background-color: #f8f9fa;
+            padding-right: 40px;
+            border: 2px solid #dee2e6;
+        }
+        select.form-control:focus {
+            background-color: #ffffff;
+            border-color: #0d6efd;
+            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+        }
+    </style>
 </head>
-
-
-
-<body class="font-mono">
-    <div>
-        <header class="header mb-5">
-            <div class="container_1">
-                <div class="logo d-flex align-items-center">
-                    <div class=""><img src="./assets/IMG-20241007-WA0047-removebg.png" width="70px" alt="logo">
-                    </div>
-                    <div class="logo-text">
-                        <h4 class="mb-0 kanit-bold ">SP</h4>
-                        <p class="mb-0 kanit-regular ">Industries</p>
-                    </div>
-                </div>
-                <nav class="menu">
-                    <div class="head">
-                        <div class="logo d-flex flex align-items-center">
-                            <div class="col-1"><img src="./assets/IMG-20241007-WA0047-removebg.png" width="70px"
-                                    alt="logo"></div>
-                            <div class="logo-text ms-2 col-1">
-                                <h4 class="mb-0 kanit-bold">SP</h4>
-                                <p class="mb-0 kanit-regular">Industries</p>
-                            </div>
-                        </div>
-                        <button class="close-menu-btn"></button>
-                    </div>
-                    <ul>
-                        <li><a href="./index.html">Home</a></li>
-                        <li class="dropdown">
-                            <a class="px-lg-3" href="./product.html">Products</a>
-                            <i class="fa-solid fa-chevron-down"></i>
-                            <ul class="sub-menu">
-                                <li class="dropdown">
-                                    <a href="./polymaterial.html"><span>Poly Material</span></a>
-
-                                </li>
-                                <li class="dropdown">
-                                    <a href="./filmsandrolls.html"><span>Films and Rolls</span></a>
-                                </li>
-                                <li class="dropdown">
-                                    <a href="./foamandgaskets.html"><span>Foam and Gasket</span></a>
-
-                                </li>
-                                <li class="dropdown">
-                                    <a href="./bags.html"><span>Bags</span></a>
-
-                                </li>
-                                <li class="dropdown">
-                                    <a href="./tapes.html"><span>Tapes</span></a>
-
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="./contactus.html">Contact us</a></li>
-                        <li><a href="./aboutus.html">About us</a></li>
-                    </ul>
-                </nav>
-
-                <div class="header-right">
-                    <!-- Additional header elements can be added here -->
-                    <button type="button" class="open-menu-button icon-btn">
-                        <i class="fa-solid fa-bars text-white"></i></button>
-
-                </div>
-            </div>
-        </header>
-    </div>
-
-    <div class="about-section container mb-3" id="featured-3">
-        <div class="row row-cols-1 px-lg-5 row-cols-lg-3">
-
-            <div class="feature col-lg-6 col-md-12">
-                <h3 class="component-subtitle kanit-bold"><span class="kanit-bold text-warning">OUR </span>VISION</h3>
-                <p style="text-align: justify;">The vision of SP Industries is to Continue to explore and implement the
-                    latest technology
-                    throughout our facility, giving us and our customers a competitive advantage in our shared
-                    market space.
-                <p class="mt-3">
-                    Reinforce our sustainability efforts and continue to be an ambassador for a better
-                    environment.
-                </p>
-                </p>
-
-            </div>
-
-            <div class="feature  col-lg-6 col-md-12">
-                <h3 class="component-subtitle kanit-bold"><span class="kanit-bold text-warning">OUR </span>MISSION</h3>
-                <p style="text-align: justify;">The mission of SP Industries is to exceed customers expectations by
-                    providing outstanding
-                    customer care through innovations created by talented, satisfied employees, while positively
-                    contributing to Indian society. We believe that our customers' satisfaction and thus their
-                    loyalty are our success.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="logos">
-        <div class="text-center">
-            <h2 class="component-title kanit-bold pb-5 alert-dark"><span class="kanit-bold text-warning">OUR </span>VALUED CUSTOMERS</h2>
-        </div>
-        <div class="logos-slide py-3">
-            <img src="./assets/logos/bajaj-logo.png" />
-            <img src="./assets/logos/belris-logo.png" />
-            <img src="./assets/logos/carrierMidea-logo.png" />
-            <img src="./assets/logos/dexgreen-logo.png" />
-            <img src="./assets/logos/durashox-logo.png" />
-            <img src="./assets/logos/elringklinger-logo.png" />
-            <img src="./assets/logos/freseniuskabi-logo.png" />
-            <img src="./assets/logos/freudenberg-logo.png" />
-            <img src="./assets/logos/haier-logo.png" />
-            <img src="./assets/logos/kknag-logo.png" />
-            <img src="./assets/logos/pg-electropast-logo.png" />
-            <img src="./assets/logos/puratos-logo.png" />
-            <img src="./assets/logos/sanjay-techno-logo.png" />
-            <img src="./assets/logos/skh-logo.png" />
-            <img src="./assets/logos/southco-logo.png" />
-            <img src="./assets/logos/starion-logo.png" />
-            <img src="./assets/logos/supreme-logo.png" />
-            <img src="./assets/logos/tatasteel-logo.png" />
-            <img src="./assets/logos/tatasteeldownstreem-logo.png" />
-            <img src="./assets/logos/varroc-logo.png" />
-            <img src="./assets/logos/vasaya-logo.png" />
-            <img src="./assets/logos/whirlpool-logo.png" />
-        </div>
-    </div>
-    <!-- Timeline Section -->
-
+<body>
     <!-- Industries We Serve Section -->
     <section class="industries-section">
-        <div class="container text-center">
+        <div class="container">
             <div class="text-center">
                 <h2 class="section-title">Industries We Serve</h2>
                 <p class="section-subtitle">At <strong>SP Industry</strong>, we deliver innovative solutions tailored to your industry needs.</p>
@@ -237,54 +252,8 @@
         </div>
     </section>
 
-    
-    <section class="timeline py-4">
-        <div class="text-center">
-            <h2 class="component-title kanit-bold"><span class="kanit-bold text-warning">MILE</span>STONE</h2>
-        </div>
-        <ol>
-            <li>
-                <div>
-                    <time>2017</time>
-                    Start-up with manufacturing of bubble & foam bags.
-                </div>
-            </li>
-            <li>
-                <div>
-                    <time>2020</time>
-                    Now we are manufacturing & supply all types packaging material.
-                </div>
-            </li>
-            <li>
-                <div>
-                    <time>2021</time>
-                    Now we moved to our own purchased manufacturing facility expansion.
-                </div>
-            </li>
-            <li>
-                <div>
-                    <time>2022</time>
-                    We are now a proud Supplier of various MNC & Well-known Customers.
-                </div>
-            </li>
-            <li>
-                <div>
-                    <time>2023</time>
-                    We Achieved a Historic Growth in our Sales & Product Development.
-                </div>
-            </li>
-            <li>
-                <div>
-                    <time>2024</time>
-                    Looking forward to create a History with our Proud Customers & Our Manufacturing Team.
-
-                </div>
-            </li>
-            <li></li>
-        </ol>
-    </section>
-
-    <footer class="py-5 mt-4" style="background-color: #daecfc;">
+    <!-- Footer Section -->
+    <footer class="py-5 mt-4" style="background-color: #f0f8ff;">
         <div class="container">
             <div class="row g-4 align-items-start">
                 <!-- Left Half -->
@@ -360,31 +329,8 @@
         </div>
     </footer>
 
-
-
-
-    <script>
-        // Wait for the DOM to load
-        document.addEventListener("DOMContentLoaded", function () {
-            const logosSlide = document.querySelector(".logos-slide");
-            const logosContainer = document.querySelector(".logos");
-    
-            // Clone the logos-slide content and append it to create a seamless loop
-            const clone = logosSlide.cloneNode(true);
-            logosContainer.appendChild(clone);
-    
-            // Ensure the cloned content follows immediately after the original
-            logosSlide.style.display = "inline-block";
-            clone.style.display = "inline-block";
-        });
-    </script>
     <!-- Bootstrap JS and Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <script src="./js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 </body>
-
 </html>

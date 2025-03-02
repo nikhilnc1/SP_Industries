@@ -1,55 +1,75 @@
-/* Reset and Base Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
+
+body, h1, h2, h3, h4, h5, h6, p, a, button, input, select, textarea {
+  font-family: 'Oswald', sans-serif !important;
+}
+
+.kanit-bold, .kanit-regular {
+  font-family: 'Oswald', sans-serif !important;
+}
+
+.form-control {
+  font-family: 'Oswald', sans-serif;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+}
+
+.logo-text h4, .logo-text p {
+  font-family: 'Oswald', sans-serif !important;
+}
+
+.menu ul li a {
+  font-family: 'Oswald', sans-serif !important;
+}
+
+.industry-card h5, .industry-card p {
+  font-family: 'Oswald', sans-serif !important;
+}
+
+.timeline ol li div {
+  font-family: 'Oswald', sans-serif !important;
+}
+
+.contact-details, .thank-you-section {
+  font-family: 'Oswald', sans-serif !important;
+}
+
 
 body, html {
   margin: 0;
   height: 100%;
-  font-family: "Kanit", sans-serif;
-  font-weight: 400;
+ 
   font-style: normal;
   max-width: 100%;
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Kanit", sans-serif;
-  font-weight: 600;
-}
 
-p, span, a {
-  font-family: "Kanit", sans-serif;
-  font-weight: 400;
-}
-
-/* Kanit Font Variations */
-.kanit-regular {
-  font-weight: 400;
-  font-style: normal;
-}
-
-.kanit-medium {
-  font-weight: 500;
-  font-style: normal;
-}
-
-.kanit-semibold {
-  font-weight: 600;
-  font-style: normal;
-}
-
-.kanit-bold {
+.component-title {
+  color: #020202;
+  font-size: 2.5rem;
   font-weight: 700;
-  font-style: normal;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.kanit-extrabold {
-  font-weight: 800;
-  font-style: normal;
+.component-subtitle{
+  color: #020202;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
+
 
 
 
@@ -113,7 +133,7 @@ p, span, a {
 :root {
   --white: #fff;
   --black: #323135;
-  --card-bg: #faf9f6;
+  --card-bg: #daecfc;
   --line-color: #e0f4ff;
   --dot-color: #0b2447;
   --year-color: #1d5b79;
@@ -238,4 +258,144 @@ p, span, a {
   .timeline {
       display: block;
   }
+}
+
+
+/* Industries we serve */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f9fa;
+}
+.industries-section {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #0d6efd, #ffffff);
+}
+.industry-card {
+  background-color: white;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  padding: 20px;
+  text-align: center;
+}
+.industry-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.industry-card h5 {
+  color: #0d6efd;
+  font-weight: bold;
+  margin-top: 15px;
+}
+.industry-card p {
+  color: #555;
+  font-size: 0.9rem;
+}
+.industry-img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.section-title {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.section-subtitle {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 50px;
+}
+
+/* footer section */
+
+footer {
+  background-color: #f0f8ff;
+  padding: 60px 0;
+  /* border-top: 3px solid #0d6efd; */
+  margin-top: 20px;
+}
+.thank-you-section h3, .contact-info h4 {
+  color: #0d6efd;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.contact-info h5 {
+  color: #ffca2c;
+  font-weight: 800;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+.contact-details i {
+  color: #0d6efd;
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+.contact-details p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333;
+}
+.card {
+  border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+.form-control {
+  background-color: #f8f9fa;
+  border: 2px solid #dee2e6;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+.form-control:focus {
+  background-color: #ffffff;
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  outline: none;
+}
+.btn-primary {
+  background-color: #0d6efd;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 20px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+.btn-primary:hover {
+  background-color: #0a58ca;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(13, 110, 253, 0.4);
+}
+.btn-primary i {
+  font-size: 1.1rem;
+  margin-right: 8px;
+}
+select.form-control {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="gray" class="bi bi-caret-down-fill" viewBox="0 0 16 16"><path d="M7.247 11.14 2.451 5.658C2.171 5.273 2.607 4.8 3.082 4.8h9.836c.475 0 .911.473.631.858l-4.796 5.481a1 1 0 0 1-1.506 0z"/></svg>') no-repeat right 15px center;
+  background-color: #f8f9fa;
+  padding-right: 40px;
+  border: 2px solid #dee2e6;
+}
+select.form-control:focus {
+  background-color: #ffffff;
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
