@@ -13,9 +13,102 @@
     <!-- <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700;800&display=swap" rel="stylesheet"> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .industry-card {
+            opacity: 0;
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        /* Add different delays for each card */
+        .industry-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .industry-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .industry-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .industry-card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .industry-card:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        .industry-card:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+
+        .industry-card:nth-child(7) {
+            animation-delay: 0.7s;
+        }
+
+        .industry-card:nth-child(8) {
+            animation-delay: 0.8s;
+        }
+
+        .industry-card:nth-child(9) {
+            animation-delay: 0.9s;
+        }
+
+        .industry-card:nth-child(10) {
+            animation-delay: 1s;
+        }
+
+        @keyframes fadeInFromLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInFromRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .feature {
+            opacity: 0;
+        }
+
+        .feature:nth-child(1) {
+            animation: fadeInFromLeft 0.8s ease-out forwards;
+        }
+
+        .feature:nth-child(2) {
+            animation: fadeInFromRight 0.8s ease-out forwards;
+        }
+    </style>
 </head>
 
 
@@ -35,8 +128,8 @@
                 <nav class="menu">
                     <div class="head">
                         <div class="logo d-flex flex align-items-center">
-                            <div class="col-1"><img src="./assets/IMG-20241007-WA0047-removebg.png" width="70px"
-                                    alt="logo"></div>
+                            <div class=""><img src="./assets/IMG-20241007-WA0047-removebg.png" width="70px" alt="logo">
+                            </div>
                             <div class="logo-text ms-2 col-1">
                                 <h4 class="mb-0 kanit-bold">SP</h4>
                                 <p class="mb-0 kanit-regular">Industries</p>
@@ -55,16 +148,17 @@
 
                                 </li>
                                 <li class="dropdown">
+                                    <a href="./bags.html"><span>Bags</span></a>
+
+                                </li>
+                                <li class="dropdown">
                                     <a href="./filmsandrolls.html"><span>Films and Rolls</span></a>
                                 </li>
                                 <li class="dropdown">
                                     <a href="./foamandgaskets.html"><span>Foam and Gasket</span></a>
 
                                 </li>
-                                <li class="dropdown">
-                                    <a href="./bags.html"><span>Bags</span></a>
 
-                                </li>
                                 <li class="dropdown">
                                     <a href="./tapes.html"><span>Tapes</span></a>
 
@@ -114,130 +208,6 @@
         </div>
     </div>
 
-    <div class="logos">
-        <div class="text-center">
-            <h2 class="component-title kanit-bold pb-5 alert-dark"><span class="kanit-bold text-warning">OUR </span>VALUED CUSTOMERS</h2>
-        </div>
-        <div class="logos-slide py-3">
-            <img src="./assets/logos/bajaj-logo.png" />
-            <img src="./assets/logos/belris-logo.png" />
-            <img src="./assets/logos/carrierMidea-logo.png" />
-            <img src="./assets/logos/dexgreen-logo.png" />
-            <img src="./assets/logos/durashox-logo.png" />
-            <img src="./assets/logos/elringklinger-logo.png" />
-            <img src="./assets/logos/freseniuskabi-logo.png" />
-            <img src="./assets/logos/freudenberg-logo.png" />
-            <img src="./assets/logos/haier-logo.png" />
-            <img src="./assets/logos/kknag-logo.png" />
-            <img src="./assets/logos/pg-electropast-logo.png" />
-            <img src="./assets/logos/puratos-logo.png" />
-            <img src="./assets/logos/sanjay-techno-logo.png" />
-            <img src="./assets/logos/skh-logo.png" />
-            <img src="./assets/logos/southco-logo.png" />
-            <img src="./assets/logos/starion-logo.png" />
-            <img src="./assets/logos/supreme-logo.png" />
-            <img src="./assets/logos/tatasteel-logo.png" />
-            <img src="./assets/logos/tatasteeldownstreem-logo.png" />
-            <img src="./assets/logos/varroc-logo.png" />
-            <img src="./assets/logos/vasaya-logo.png" />
-            <img src="./assets/logos/whirlpool-logo.png" />
-        </div>
-    </div>
-    <!-- Timeline Section -->
-
-    <!-- Industries We Serve Section -->
-    <section class="industries-section">
-        <div class="container text-center">
-            <div class="text-center">
-                <h2 class="section-title">Industries We Serve</h2>
-                <p class="section-subtitle">At <strong>SP Industry</strong>, we deliver innovative solutions tailored to your industry needs.</p>
-            </div>
-            <div class="row g-4">
-                <!-- Automotive Industry -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="industry-card">
-                        <img src="assets/industryweserve/automotive.jpg" alt="Automotive Industry" class="industry-img">
-                        <h5>Automotive Industry</h5>
-                        <p>Driving the future with precision solutions for vehicle manufacturing and performance.</p>
-                    </div>
-                </div>
-                <!-- White Goods Industry -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="industry-card">
-                        <img src="assets/industryweserve/goods.jpg" alt="White Goods Industry" class="industry-img">
-                        <h5>White Goods Industry</h5>
-                        <p>Powering homes with reliable components for everyday appliances.</p>
-                    </div>
-                </div>
-                <!-- HVAC Industry -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="industry-card">
-                        <img src="assets/industryweserve/hvac.jpg" alt="HVAC Industry" class="industry-img">
-                        <h5>HVAC Industry</h5>
-                        <p>Advanced systems for heating, ventilation, and air conditioning solutions.</p>
-                    </div>
-                </div>
-                <!-- Label Industry -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="industry-card">
-                        <img src="assets/industryweserve/label.jpg" alt="Label Industry" class="industry-img">
-                        <h5>Label Industry</h5>
-                        <p>High-quality, durable labels that inform and attract.</p>
-                    </div>
-                </div>
-                <!-- Packaging Industry -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="industry-card">
-                        <img src="assets/industryweserve/packaging.jpg" alt="Packaging Industry" class="industry-img">
-                        <h5>Packaging Industry</h5>
-                        <p>Innovative and sustainable packaging solutions.</p>
-                    </div>
-                </div>
-                <!-- Paper Mills Industry -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="industry-card">
-                        <img src="assets/industryweserve/paper.jpg" alt="Paper Mills Industry" class="industry-img">
-                        <h5>Paper Mills Industry</h5>
-                        <p>Efficient and reliable support for paper production.</p>
-                    </div>
-                </div>
-                <!-- Signage Industry -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="industry-card">
-                        <img src="assets/industryweserve/signage.jpg" alt="Signage Industry" class="industry-img">
-                        <h5>Signage Industry</h5>
-                        <p>Vibrant, long-lasting signage solutions.</p>
-                    </div>
-                </div>
-                <!-- Surface Protection Industry -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="industry-card">
-                        <img src="assets/industryweserve/surface.jpg" alt="Surface Protection Industry" class="industry-img">
-                        <h5>Surface Protection Industry</h5>
-                        <p>Top-tier protective technologies for your assets.</p>
-                    </div>
-                </div>
-                <!-- Wire Harness Industry -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="industry-card">
-                        <img src="assets/industryweserve/wireharness.jpg" alt="Wire Harness Industry" class="industry-img">
-                        <h5>Wire Harness Industry</h5>
-                        <p>Expertly designed wiring for seamless performance.</p>
-                    </div>
-                </div>
-                <!-- Electrical Industry -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="industry-card">
-                        <img src="assets/industryweserve/electrical.jpg" alt="Electrical Industry" class="industry-img">
-                        <h5>Electrical Industry</h5>
-                        <p>Safe and efficient electrical components.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    
     <section class="timeline py-4">
         <div class="text-center">
             <h2 class="component-title kanit-bold"><span class="kanit-bold text-warning">MILE</span>STONE</h2>
@@ -284,81 +254,230 @@
         </ol>
     </section>
 
-    <footer class="py-5 mt-4" style="background-color: #daecfc;">
-        <div class="container">
-            <div class="row g-4 align-items-start">
-                <!-- Left Half -->
-                <div class="col-md-6">
-                    <!-- Thank You Message -->
-                    <div class="thank-you-section mb-4">
-                        <h3 class="text-primary mb-3">Thank You for Your Interest</h3>
-                        <p class="text-dark mb-4">We deeply appreciate you taking the time to explore our website. Your interest in SP Industry’s solutions inspires us. Let us assist you with any inquiries—reach out today!</p>
-                    </div>
+    <div class="logos">
+        <div class="text-center">
+            <h2 class="component-title kanit-bold pb-5 alert-dark"><span class="kanit-bold text-warning">OUR
+                </span>VALUED CUSTOMERS</h2>
+        </div>
+        <div class="logos-slide py-3">
+            <img src="./assets/logos/bajaj-logo.png" />
+            <img src="./assets/logos/belris-logo.png" />
+            <img src="./assets/logos/carrierMidea-logo.png" />
+            <img src="./assets/logos/dexgreen-logo.png" />
+            <img src="./assets/logos/durashox-logo.png" />
+            <img src="./assets/logos/elringklinger-logo.png" />
+            <img src="./assets/logos/freseniuskabi-logo.png" />
+            <img src="./assets/logos/freudenberg-logo.png" />
+            <img src="./assets/logos/haier-logo.png" />
+            <img src="./assets/logos/kknag-logo.png" />
+            <img src="./assets/logos/pg-electropast-logo.png" />
+            <img src="./assets/logos/puratos-logo.png" />
+            <img src="./assets/logos/sanjay-techno-logo.png" />
+            <img src="./assets/logos/skh-logo.png" />
+            <img src="./assets/logos/southco-logo.png" />
+            <img src="./assets/logos/starion-logo.png" />
+            <img src="./assets/logos/supreme-logo.png" />
+            <img src="./assets/logos/tatasteel-logo.png" />
+            <img src="./assets/logos/tatasteeldownstreem-logo.png" />
+            <img src="./assets/logos/varroc-logo.png" />
+            <img src="./assets/logos/vasaya-logo.png" />
+            <img src="./assets/logos/whirlpool-logo.png" />
+        </div>
+    </div>
+    <!-- Timeline Section -->
 
-                    <!-- Contact Information -->
-                    <div class="contact-info">
-                        <h4 class="mb-3 text-primary">Contact Us</h4>
-                        <h5 class="mb-3 text-warning">SP Industries</h5>
-                        <div class="contact-details text-dark">
-                            <p class="mb-2">
-                                <i class="fas fa-phone-alt me-2 text-primary"></i>
-                                <strong>Business Enquiries:</strong><br>
-                                <span class="ms-4">+91 74989 15541<br>+91 8484 02 0760</span>
-                            </p>
-                            <p class="mb-2">
-                                <i class="fas fa-envelope me-2 text-primary"></i>
-                                <strong>Email:</strong><br>
-                                <span class="ms-4">shubhangi.spindustries@gmail.com<br>pravin.spindustries@gmail.com</span>
-                            </p>
-                            <p class="mb-0">
-                                <i class="fas fa-map-marker-alt me-2 text-primary"></i>
-                                <strong>Office:</strong><br>
-                                <span class="ms-4">Plot No. C 3/5, MIDC Industrial Area,<br>Ranjangaon, Tal. Shirur, Dist. Pune,<br>Maharashtra, India - 412220</span>
+    <!-- Industries We Serve Section -->
+    <div>
+        <section class="industries-section">
+            <div class="container text-center">
+                <div class="text-center">
+                    <h2 class="section-title"><span class="text-warning">Industries</span> We Serve</h2>
+                    <p class="section-subtitle">At <strong>SP Industry</strong>, we deliver innovative solutions
+                        tailored to
+                        your industry needs.</p>
+                </div>
+                <div class="row g-4">
+                    <!-- Automotive Industry -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="industry-card">
+                            <img src="assets/industryweserve/automotive.jpg" alt="Automotive Industry"
+                                class="industry-img">
+                            <h5>Automotive Industry</h5>
+                            <p>Driving the future with precision solutions for vehicle manufacturing and performance.
                             </p>
                         </div>
                     </div>
-                </div>
-
-                <!-- Right Half - Form Section -->
-                <div class="col-md-6">
-                    <div class="card border-0 bg-white text-dark p-4" style="border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
-                        <h5 class="card-title mb-4 text-primary">Get In Touch With Us</h5>
-                        <form id="contactForm" action="#" method="POST">
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <input type="text" name="firstName" id="firstName" class="form-control" placeholder="First Name" required>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <input type="text" name="lastName" id="lastName" class="form-control" placeholder="Last Name" required>
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <input type="email" name="email" id="email" class="form-control" placeholder="Email Address" required>
-                            </div>
-                            <div class="mb-3">
-                                <input type="tel" name="phone" id="phone" class="form-control" placeholder="Phone Number" required>
-                            </div>
-                            <div class="mb-3">
-                                <select name="subject" id="subject" class="form-control">
-                                    <option value="" selected disabled>Select Subject</option>
-                                    <option value="general">General Inquiry</option>
-                                    <option value="support">Product Support</option>
-                                    <option value="quote">Request Quote</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                            <div class="mb-4">
-                                <textarea name="message" id="message" class="form-control" rows="4" placeholder="Your Message" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary w-100 py-2">
-                                <i class="fas fa-paper-plane me-2"></i>Send Message
-                            </button>
-                        </form>
+                    <!-- White Goods Industry -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="industry-card">
+                            <img src="assets/industryweserve/goods.jpg" alt="White Goods Industry" class="industry-img">
+                            <h5>White Goods Industry</h5>
+                            <p>Powering homes with reliable components for everyday appliances.</p>
+                        </div>
+                    </div>
+                    <!-- HVAC Industry -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="industry-card">
+                            <img src="assets/industryweserve/hvac.jpg" alt="HVAC Industry" class="industry-img">
+                            <h5>HVAC Industry</h5>
+                            <p>Advanced systems for heating, ventilation, and air conditioning solutions.</p>
+                        </div>
+                    </div>
+                    <!-- Label Industry -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="industry-card">
+                            <img src="assets/industryweserve/label.jpg" alt="Label Industry" class="industry-img">
+                            <h5>Label Industry</h5>
+                            <p>High-quality, durable labels that inform and attract.</p>
+                        </div>
+                    </div>
+                    <!-- Packaging Industry -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="industry-card">
+                            <img src="assets/industryweserve/packaging.jpg" alt="Packaging Industry"
+                                class="industry-img">
+                            <h5>Packaging Industry</h5>
+                            <p>Innovative and sustainable packaging solutions.</p>
+                        </div>
+                    </div>
+                    <!-- Paper Mills Industry -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="industry-card">
+                            <img src="assets/industryweserve/paper.jpg" alt="Paper Mills Industry" class="industry-img">
+                            <h5>Paper Mills Industry</h5>
+                            <p>Efficient and reliable support for paper production.</p>
+                        </div>
+                    </div>
+                    <!-- Signage Industry -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="industry-card">
+                            <img src="assets/industryweserve/signage.jpg" alt="Signage Industry" class="industry-img">
+                            <h5>Signage Industry</h5>
+                            <p>Vibrant, long-lasting signage solutions.</p>
+                        </div>
+                    </div>
+                    <!-- Surface Protection Industry -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="industry-card">
+                            <img src="assets/industryweserve/surface.jpg" alt="Surface Protection Industry"
+                                class="industry-img">
+                            <h5>Surface Protection Industry</h5>
+                            <p>Top-tier protective technologies for your assets.</p>
+                        </div>
+                    </div>
+                    <!-- Wire Harness Industry -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="industry-card">
+                            <img src="assets/industryweserve/wireharness.jpg" alt="Wire Harness Industry"
+                                class="industry-img">
+                            <h5>Wire Harness Industry</h5>
+                            <p>Expertly designed wiring for seamless performance.</p>
+                        </div>
+                    </div>
+                    <!-- Electrical Industry -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="industry-card">
+                            <img src="assets/industryweserve/electrical.jpg" alt="Electrical Industry"
+                                class="industry-img">
+                            <h5>Electrical Industry</h5>
+                            <p>Safe and efficient electrical components.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </section>
+
+
+
+
+        <footer class="py-5" style="background-color: #daecfc;">
+            <div class="container">
+                <div class="row g-4 align-items-start">
+                    <!-- Left Half -->
+                    <div class="col-md-6">
+                        <!-- Thank You Message -->
+                        <div class="thank-you-section mb-4">
+                            <h3 class="text-primary mb-3">Thank You for Your Interest</h3>
+                            <p class="text-dark mb-4">We deeply appreciate you taking the time to explore our website.
+                                Your
+                                interest in SP Industry’s solutions inspires us. Let us assist you with any
+                                inquiries—reach
+                                out today!</p>
+                        </div>
+
+                        <!-- Contact Information -->
+                        <div class="contact-info">
+                            <h4 class="mb-3 text-primary">Contact Us</h4>
+                            <h5 class="mb-3 text-warning">SP Industries</h5>
+                            <div class="contact-details text-dark">
+                                <p class="mb-2">
+                                    <i class="fas fa-phone-alt me-2 text-primary"></i>
+                                    <strong>Business Enquiries:</strong><br>
+                                    <span class="ms-4">+91 74989 15541<br>+91 8484 02 0760</span>
+                                </p>
+                                <p class="mb-2">
+                                    <i class="fas fa-envelope me-2 text-primary"></i>
+                                    <strong>Email:</strong><br>
+                                    <span
+                                        class="ms-4">shubhangi.spindustries@gmail.com<br>pravin.spindustries@gmail.com</span>
+                                </p>
+                                <p class="mb-0">
+                                    <i class="fas fa-map-marker-alt me-2 text-primary"></i>
+                                    <strong>Office:</strong><br>
+                                    <span class="ms-4">Plot No. C 3/5, MIDC Industrial Area,<br>Ranjangaon, Tal. Shirur,
+                                        Dist. Pune,<br>Maharashtra, India - 412220</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Half - Form Section -->
+                    <div class="col-md-6">
+                        <div class="card border-0 bg-white text-dark p-4"
+                            style="border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
+                            <h5 class="card-title mb-4 text-primary">Get In Touch With Us</h5>
+                            <form id="contactForm" action="#" method="POST">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <input type="text" name="firstName" id="firstName" class="form-control"
+                                            placeholder="First Name" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <input type="text" name="lastName" id="lastName" class="form-control"
+                                            placeholder="Last Name" required>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="email" name="email" id="email" class="form-control"
+                                        placeholder="Email Address" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="tel" name="phone" id="phone" class="form-control"
+                                        placeholder="Phone Number" required>
+                                </div>
+                                <div class="mb-3">
+                                    <select name="subject" id="subject" class="form-control">
+                                        <option value="" selected disabled>Select Subject</option>
+                                        <option value="general">General Inquiry</option>
+                                        <option value="support">Product Support</option>
+                                        <option value="quote">Request Quote</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="mb-4">
+                                    <textarea name="message" id="message" class="form-control" rows="4"
+                                        placeholder="Your Message" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 py-2">
+                                    <i class="fas fa-paper-plane me-2"></i>Send Message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
 
 
 
@@ -368,15 +487,33 @@
         document.addEventListener("DOMContentLoaded", function () {
             const logosSlide = document.querySelector(".logos-slide");
             const logosContainer = document.querySelector(".logos");
-    
+
             // Clone the logos-slide content and append it to create a seamless loop
             const clone = logosSlide.cloneNode(true);
             logosContainer.appendChild(clone);
-    
+
             // Ensure the cloned content follows immediately after the original
             logosSlide.style.display = "inline-block";
             clone.style.display = "inline-block";
         });
+    </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.industry-card').forEach(card => {
+            card.style.animationPlayState = 'paused';
+            observer.observe(card);
+        });
+    });
     </script>
     <!-- Bootstrap JS and Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
