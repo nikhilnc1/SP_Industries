@@ -131,7 +131,8 @@
 
         .sp-fact {
             position: relative;
-            z-index: 1; /* Lower z-index for the card */
+            z-index: 1;
+            /* Lower z-index for the card */
             height: 300px;
             background-color: white;
             padding: 30px;
@@ -147,7 +148,8 @@
         .sp-fact:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-            z-index: 2; /* Increased z-index on hover, but still lower than badge */
+            z-index: 2;
+            /* Increased z-index on hover, but still lower than badge */
         }
 
         .sp-icon-box {
@@ -190,7 +192,8 @@
             font-weight: bold;
             font-size: 1.2rem;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            z-index: 45; /* Increased z-index to stay above other elements */
+            z-index: 45;
+            /* Increased z-index to stay above other elements */
         }
 
         .sp-prev,
@@ -241,6 +244,115 @@
                 min-height: 280px;
             }
         }
+
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        .carousel {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .red-line {
+            position: absolute;
+            left: 5%;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 50px;
+            background-color: #E74C3C;
+            z-index: 2;
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            color: white;
+            opacity: 0;
+            animation: slideInFromLeft 1s ease-out forwards;
+        }
+
+        .content h1 {
+            font-size: 2rem;
+            line-height: 1.4;
+        }
+
+        @keyframes slideInFromLeft {
+            from {
+                opacity: 0;
+                transform: translateY(-50%) translateX(-2%);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(-50%) translateX(calc(5% + 5px));
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-height: 768px) {
+            .carousel-container {
+                height: 400px;
+            }
+
+            .content h1 {
+                font-size: 1.9rem;
+            }
+
+            .red-line {
+                height: 40px;
+            }
+        }
+
+        @media (max-height: 480px) {
+            .carousel-container {
+                height: 300px;
+            }
+
+            .content h1 {
+                font-size: 1.2rem;
+            }
+
+            .red-line {
+                height: 30px;
+            }
+        }
+
+        /* Slide backgrounds */
+        .slide:nth-child(1) {
+            background-image: url('./assets/industry/industry_image1.png');
+        }
+
+        .slide:nth-child(2) {
+            background-image: url('./assets/industry/industry_image2.png');
+        }
+
+        .slide:nth-child(3) {
+            background-image: url('./assets/industry/industry_image3.png');
+        }
     </style>
 </head>
 
@@ -248,7 +360,7 @@
 
 <body class="font-mono">
     <div>
-        <header class="header mb-5">
+        <header class="header">
             <div class="container_1">
                 <div class="logo d-flex align-items-center">
                     <div class=""><img src="./assets/IMG-20241007-WA0047-removebg.png" width="70px" alt="logo">
@@ -312,12 +424,39 @@
             </div>
         </header>
     </div>
+    <section>
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="slide active">
+                    <div class="red-line"></div>
+                    <div class="content">
+                        <h1>Engineering Trust, Delivering Excellence.</h1>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="red-line"></div>
+                    <div class="content">
+                        <h1>Powering Progress with Precision & Innovation.</h1>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="red-line"></div>
+                    <div class="content">
+                        <h1>Your Partner in Industrial Strength Solutions.</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
     <section class="sp-why-us py-2">
         <div class="container text-center mb-4">
             <h2 class="section-title"><span class="text-warning">Why</span> Choose Us</h2>
             <p class="lead">
-                We deliver excellence through innovation, quality, and unwavering commitment. With over 7 years of industry experience, 
-                we've built a strong reputation for reliability and expertise in manufacturing solutions that exceed customer expectations.
+                We deliver excellence through innovation, quality, and unwavering commitment. With over 7 years of
+                industry experience,
+                we've built a strong reputation for reliability and expertise in manufacturing solutions that exceed
+                customer expectations.
             </p>
         </div>
 
@@ -753,7 +892,7 @@
     </script>
     <!-- Add this before closing body tag -->
     <script>
-        $(document).ready(function(){
+        $(document).ready(function () {
             $(".sp-slider-responsive").slick({
                 prevArrow: $(".sp-prev"),
                 nextArrow: $(".sp-next"),
@@ -779,6 +918,33 @@
                 ]
             });
         });
+
+        const slides = document.querySelectorAll('.slide');
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide) => {
+                slide.classList.remove('active');
+                const content = slide.querySelector('.content');
+                content.style.animation = 'none';
+                content.offsetHeight; // trigger reflow
+            });
+
+            slides[index].classList.add('active');
+            const content = slides[index].querySelector('.content');
+            content.style.animation = 'slideInFromLeft 1s ease-out forwards';
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        }
+
+        // Initial slide
+        showSlide(currentIndex);
+
+        // Auto transition
+        setInterval(nextSlide, 5000);
     </script>
     <!-- Bootstrap JS and Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
