@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
 
@@ -9,11 +8,24 @@
 
 }
 
-body, h1, h2, h3, h4, h5, h6, p, a, button, input, select, textarea {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+button,
+input,
+select,
+textarea {
   font-family: 'Oswald', sans-serif !important;
 }
 
-.kanit-bold, .kanit-regular {
+.kanit-bold,
+.kanit-regular {
   font-family: 'Oswald', sans-serif !important;
 }
 
@@ -23,7 +35,8 @@ body, h1, h2, h3, h4, h5, h6, p, a, button, input, select, textarea {
   border: 1px solid #dee2e6;
 }
 
-.logo-text h4, .logo-text p {
+.logo-text h4,
+.logo-text p {
   font-family: 'Oswald', sans-serif !important;
 }
 
@@ -31,7 +44,8 @@ body, h1, h2, h3, h4, h5, h6, p, a, button, input, select, textarea {
   font-family: 'Oswald', sans-serif !important;
 }
 
-.industry-card h5, .industry-card p {
+.industry-card h5,
+.industry-card p {
   font-family: 'Oswald', sans-serif !important;
 }
 
@@ -39,15 +53,17 @@ body, h1, h2, h3, h4, h5, h6, p, a, button, input, select, textarea {
   font-family: 'Oswald', sans-serif !important;
 }
 
-.contact-details, .thank-you-section {
+.contact-details,
+.thank-you-section {
   font-family: 'Oswald', sans-serif !important;
 }
 
 
-body, html {
+body,
+html {
   margin: 0;
   height: 100%;
- 
+
   font-style: normal;
   max-width: 100%;
   overflow-x: hidden;
@@ -62,7 +78,7 @@ body, html {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.component-subtitle{
+.component-subtitle {
   color: #020202;
   font-size: 1.8rem;
   font-weight: 700;
@@ -117,18 +133,21 @@ body, html {
   width: auto;
   margin: 0 40px;
   display: inline-block;
-  vertical-align: middle; /* Ensures images align properly */
+  vertical-align: middle;
+  /* Ensures images align properly */
   object-fit: contain;
 }
 
 @keyframes slide {
   0% {
-      transform: translateX(0);
+    transform: translateX(0);
   }
+
   100% {
-      transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 }
+
 /* Timeline */
 :root {
   --white: #fff;
@@ -256,7 +275,7 @@ body, html {
 
 @media screen and (max-width: 800px) {
   .timeline {
-      display: block;
+    display: block;
   }
 }
 
@@ -267,10 +286,12 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color: #f8f9fa;
 }
+
 .industries-section {
   padding: 60px 0;
   /* background: linear-gradient(135deg, #8ac8ff, #ffffff); */
 }
+
 .industry-card {
   background-color: white;
   border: none;
@@ -281,25 +302,30 @@ body {
   padding: 20px;
   text-align: center;
 }
+
 .industry-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
 .industry-card h5 {
   color: #0d6efd;
   font-weight: bold;
   margin-top: 15px;
 }
+
 .industry-card p {
   color: #555;
   font-size: 0.9rem;
 }
+
 .industry-img {
   width: 100%;
   height: 120px;
   object-fit: cover;
   border-radius: 10px;
 }
+
 .section-title {
   color: #000000;
   font-size: 2.5rem;
@@ -307,6 +333,18 @@ body {
   margin-bottom: 20px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
+
+@media (max-width: 609px) {
+  .section-title {
+    color: #000000;
+    font-size: 2.0rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+}
+
 .section-subtitle {
   color: #000000;
   font-size: 1.2rem;
@@ -321,27 +359,33 @@ footer {
   /* border-top: 3px solid #0d6efd; */
   margin-top: 40px;
 }
-.thank-you-section h3, .contact-info h4 {
+
+.thank-you-section h3,
+.contact-info h4 {
   color: #0d6efd;
   font-weight: 700;
   font-size: 1.5rem;
 }
+
 .contact-info h5 {
   color: #ffca2c;
   font-weight: 800;
   font-size: 1.3rem;
   text-transform: uppercase;
 }
+
 .contact-details i {
   color: #0d6efd;
   font-size: 1.2rem;
   margin-right: 10px;
 }
+
 .contact-details p {
   font-size: 1rem;
   line-height: 1.8;
   color: #333;
 }
+
 .card {
   border-radius: 15px;
   background-color: #ffffff;
@@ -349,10 +393,12 @@ footer {
   padding: 30px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
+
 .card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
+
 .form-control {
   background-color: #f8f9fa;
   border: 2px solid #dee2e6;
@@ -361,12 +407,14 @@ footer {
   font-size: 1rem;
   transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
+
 .form-control:focus {
   background-color: #ffffff;
   border-color: #0d6efd;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
   outline: none;
 }
+
 .btn-primary {
   background-color: #0d6efd;
   border: none;
@@ -376,15 +424,18 @@ footer {
   font-size: 1.1rem;
   transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .btn-primary:hover {
   background-color: #0a58ca;
   transform: translateY(-4px);
   box-shadow: 0 6px 15px rgba(13, 110, 253, 0.4);
 }
+
 .btn-primary i {
   font-size: 1.1rem;
   margin-right: 8px;
 }
+
 select.form-control {
   appearance: none;
   -webkit-appearance: none;
@@ -394,6 +445,7 @@ select.form-control {
   padding-right: 40px;
   border: 2px solid #dee2e6;
 }
+
 select.form-control:focus {
   background-color: #ffffff;
   border-color: #0d6efd;
